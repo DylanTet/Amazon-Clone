@@ -44,7 +44,7 @@ function Header() {
           </div>
         </Link>
 
-        <Link className="header__link" to="/checkout">
+        <Link className="header__link" to="checkout">
           <div className="header__optionBasket">
               <img className='header__cart-icon' src={cart} />
               <p className="header__optionLineTwo header__cart-count">{basket?.length}</p>

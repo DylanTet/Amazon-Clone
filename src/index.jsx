@@ -11,14 +11,17 @@ const container = document.getElementById("root");
 
 const root = createRoot(container);
 
+const domain = process.env.REACT_APP_AUTH0_DOMAIN
+const clientID = process.env.REACT_APP_AUTH0_CLIENT_ID
+
 root.render(
   <StrictMode>
     <BrowserRouter>
       <StateProvider initialState={initialState} reducer={reducer}>
         <Auth0Provider
-          domain="dev-aw24h7vl.us.auth0.com"
-          clientId="EgyDJDGhaQmjWYNbObzTd3IXiBr5nE4s"
-          redirectUri='https://Amazon-Clone-1.dylantet.repl.co'
+          domain={domain}
+          clientId={clientID}
+          redirectUri="http://localhost:3000/"
         >
           <App />
         </Auth0Provider>
